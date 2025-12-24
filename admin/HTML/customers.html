@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Customers</title>
+    <link rel="stylesheet" href="../CSS/sidebar.css">
+    <link rel="stylesheet" href="../CSS/customers.css">
+    <script src="../JS/auth.js"></script>
+</head>
+
+<body>
+    <nav class="sidebar">
+        <h2>Best Cart</h2>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="products.html">Products</a>
+        <a href="orders.html">Orders</a>
+        <a href="customers.html" class="active">Customers</a>
+        <a href="marketing.html">Marketing</a>
+        <a href="#" onclick="logout()" class="logout">Logout</a>
+    </nav>
+    <div class="main">
+        <h1>Manage Customers</h1>
+        <div class="input-grp">
+            <input type="text" id="name" placeholder="Name">
+            <input type="text" id="email" placeholder="Email">
+            <input type="text" id="phone" placeholder="Phone">
+            <button class="btn btn-primary" onclick="addCust()">Add</button>
+        </div>
+        <table id="cust-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script src="../../Backend/db.js"></script>
+    <script src="../JS/customers.js"></script>
+</body>
+
+</html>

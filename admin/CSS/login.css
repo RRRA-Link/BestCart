@@ -1,0 +1,34 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #3a3c3f;
+    font-family: sans-serif;
+}
+
+.login-box {
+    background: rgb(179, 175, 175);
+    padding: 100px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+input {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    background-color: blanchedalmond;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #02303b;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+}

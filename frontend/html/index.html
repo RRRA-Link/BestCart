@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Cart | Home</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <a class="logo" href="index.html">
+                <h2 style="color:#ff741f; margin:0;">Best<span style="color:#333;">Cart</span></h2>
+            </a>
+
+            <nav>
+                <div class="categories-dropdown">
+                    <a href="#" class="drop-trigger">☰ Categories</a>
+                    <div id="dropdown-list" class="dropdown-content">
+                        </div>
+                </div>
+
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" id="search-input" placeholder="Search for products...">
+                        <button onclick="searchProducts()">Search</button>
+                    </div>
+                </div>
+
+                <div class="nav-actions">
+                    <a href="#" class="nav-btn" onclick="alert('Cart feature coming soon!')">🛒 Cart (<span id="cart-count">0</span>)</a>
+                    <a href="#" class="nav-btn">👤 Profile</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="banner">
+        <div id="slider-container">
+            <div id="slider-media-wrapper" style="width:100%; height:100%;"></div>
+            
+            <div class="slider-controls">
+                <button id="prevBtn" onclick="prevSlide()">⟨</button>
+                <button id="nextBtn" onclick="nextSlide()">⟩</button>
+            </div>
+            <div id="slider-text" class="slider-caption"></div>
+        </div>
+    </section>
+
+    <section id="category-section" class="categories-container">
+        <h1 class="section-title">Shop by Category</h1>
+        <div id="category-grid" class="category-grid">
+            </div>
+    </section>
+
+    <section class="featured-section">
+        <div class="featured-content">
+            <h1 class="section-title">Featured Products</h1>
+            <div id="product-grid" class="product-grid">
+                </div>
+        </div>
+    </section>
+
+    <div id="promo-popup" class="popup-overlay" style="display:none;">
+        <div class="popup-content">
+            <button onclick="closePopup()" class="close-btn">×</button>
+            <div id="popup-media"></div>
+            <p id="popup-desc"></p>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content-container">
+            <div class="footer-column contact-column">
+                <p>Rahman Regnum Centre, Dhaka-1208, Bangladesh</p>
+                <p>📞 +8809613444455</p>
+                <p>customer.care@happymart.com</p>
+            </div>
+            <div class="footer-column link-group">
+                <h4 class="footer-heading">HappyMart</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-column payment-methods">
+                <h4 class="footer-heading">We Accept</h4>
+                <div class="payment-grid">
+                   <span>bKash</span> <span>Nagad</span> <span>COD</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            &copy; 2025 HappyMart. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="../../Backend/db.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

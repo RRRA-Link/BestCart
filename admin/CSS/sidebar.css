@@ -1,0 +1,107 @@
+:root {
+    --primary: rgb(255, 123, 0);
+    --dark: #352f29;
+    --light: #b2b9be;;
+    
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    height: 100vh;
+    background: var(--light);
+}
+
+.sidebar {
+    width: 250px;
+    background: var(--dark);
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary);
+}
+
+.sidebar a {
+    padding: 15px;
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px solid #ffa600;
+    transition: 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: lightyellow;
+    color: rgb(250, 121, 1);
+}
+
+.logout {
+    margin-top: auto;
+    background: #fd9002;
+    text-align: center;
+    color: rgb(39, 32, 32) !important;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+
+.main {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.btn {
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+}
+
+.btn-primary {
+    background: var(--primary);
+}
+
+.btn-danger {
+    background: #e63946;
+}
+
+.btn-edit {
+    background: #f72585;
+}
+
+input,
+select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #eef;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Marketing</title>
+    <link rel="stylesheet" href="../CSS/sidebar.css">
+    <link rel="stylesheet" href="../CSS/marketing.css">
+    <script src="../JS/auth.js"></script>
+</head>
+<body>
+    <nav class="sidebar">
+        <h2>Best Cart</h2>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="products.html">Products</a>
+        <a href="orders.html">Orders</a>
+        <a href="customers.html">Customers</a>
+        <a href="marketing.html" class="active">Marketing</a>
+        <a href="#" onclick="logout()" class="logout">Logout</a>
+    </nav>
+    <div class="main">
+        <h1>Marketing Management</h1>
+        
+        <div style="display:flex; gap:20px; flex-wrap:wrap;">
+            
+            <div class="box" style="flex:1; min-width:300px;">
+                <div class="header-row">
+                    <h3>Homepage Sliders</h3>
+                    <button class="btn btn-primary" onclick="openSliderModal()">+ Add New Slide</button>
+                </div>
+                <div id="slider-list" class="item-list"></div>
+            </div>
+
+            <div class="box" style="flex:1; min-width:300px;">
+                <div class="header-row">
+                    <h3>Promotional Popups</h3>
+                    <button class="btn btn-primary" onclick="openPopupModal()">+ Add New Popup</button>
+                </div>
+                <div id="popup-list" class="item-list"></div>
+            </div>
+        </div>
+
+        <div id="slider-modal" class="modal">
+            <div class="modal-content">
+                <h3>Add New Slide</h3>
+                <label>Media Type:</label>
+                <select id="new-s-type">
+                    <option value="image">Image</option>
+                    <option value="video">Video</option>
+                </select>
+                <label>Upload File:</label>
+                <input type="file" id="new-s-file">
+                <label>Overlay Text:</label>
+                <input type="text" id="new-s-text" placeholder="Big Sale 50% Off">
+                <div class="modal-actions">
+                    <button class="btn btn-primary" onclick="addSlider()">Add Slide</button>
+                    <button class="btn btn-danger" onclick="closeModal('slider-modal')">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="popup-modal" class="modal">
+            <div class="modal-content">
+                <h3>Add New Popup</h3>
+                <label>Media Type:</label>
+                <select id="new-p-type">
+                    <option value="image">Image</option>
+                    <option value="video">Video</option>
+                </select>
+                <label>Upload File:</label>
+                <input type="file" id="new-p-file">
+                <label>Description:</label>
+                <input type="text" id="new-p-desc" placeholder="BUY NOW">
+                <label><input type="checkbox" id="new-p-active" checked> Set as Active</label>
+                <div class="modal-actions">
+                    <button class="btn btn-primary" onclick="addPopup()">Add Popup</button>
+                    <button class="btn btn-danger" onclick="closeModal('popup-modal')">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <script src="../../Backend/db.js"></script>
+    <script src="../JS/marketing.js"></script>
+</body>
+</html>

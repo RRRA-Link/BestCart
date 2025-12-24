@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../CSS/sidebar.css">
+    <link rel="stylesheet" href="../CSS/dashboard.css">
+    <script src="../JS/auth.js"></script>
+</head>
+
+<body>
+    <nav class="sidebar">
+        <h2>Best Cart</h2>
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="products.html">Products</a>
+        <a href="orders.html">Orders</a>
+        <a href="customers.html">Customers</a>
+        <a href="marketing.html">Marketing</a>
+        <a href="../../frontend/html/index.html" target="_blank">View Frontend</a>
+        <a href="#" onclick="logout()" class="logout">Logout</a>
+    </nav>
+    <div class="main">
+        <h1>Dashboard</h1>
+        <div class="cards">
+            <div class="card">
+                <h3>Customers</h3>
+                <h2 id="total-cust">0</h2>
+            </div>
+            <div class="card">
+                <h3>Products</h3>
+                <h2 id="total-prod">0</h2>
+            </div>
+            <div class="card">
+                <h3>Orders</h3>
+                <h2 id="total-ord">0</h2>
+            </div>
+        </div>
+
+        <h3>Pending Orders</h3>
+        <table id="pending-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Customer</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <h3>Product Stock</h3>
+        <input type="text" id="search" placeholder="Search Product..." onkeyup="renderStock()">
+        <table id="stock-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Stock</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script src="../../Backend/db.js"></script>
+    <script src="../JS/dashboard.js"></script>
+</body>
+
+</html>
