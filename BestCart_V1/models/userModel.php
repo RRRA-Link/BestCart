@@ -16,14 +16,14 @@
         return mysqli_fetch_assoc($result);
     }
 
-    
+    // --- NEW: Add User Function ---
     function addUser($username, $email, $password, $role) {
         $con = getConnection();
         $username = mysqli_real_escape_string($con, $username);
         $email = mysqli_real_escape_string($con, $email);
         $role = mysqli_real_escape_string($con, $role);
         
-        
+        // Securely hash the password
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
         $sql = "INSERT INTO users (username, email, password, role) VALUES ('$username', '$email', '$hashed_password', '$role')";

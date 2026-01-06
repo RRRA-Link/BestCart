@@ -1,12 +1,12 @@
 <?php
     require_once('db.php');
 
-    
+    // --- UPDATED: Search Capability ---
     function getAllOrders($search = ""){
         $con = getConnection();
         if($search != ""){
             $s = mysqli_real_escape_string($con, $search);
-           
+            // Search by ID, Name, or Email
             $sql = "SELECT * FROM orders 
                     WHERE id LIKE '%$s%' 
                     OR customer_name LIKE '%$s%' 
@@ -29,7 +29,7 @@
         return mysqli_fetch_assoc($result);
     }
 
-    
+    // --- UPDATED: Save Email ---
     function addOrder($o){
         $con = getConnection();
         $name = mysqli_real_escape_string($con, $o['customer_name']);
@@ -65,7 +65,7 @@
         return mysqli_query($con, "DELETE FROM orders WHERE id=$id");
     }
 
-   
+    // Same sales function as before
     function getSalesByDate(){
         $con = getConnection();
         $sql = "SELECT order_date, SUM(total_amount) as total_sales, COUNT(*) as total_orders 
