@@ -3,7 +3,7 @@
 <nav class="navbar">
 
     <div class="logo">
-        <div style="width:32px; height:32px; background:#3b82f6; border-radius:6px; display:flex; align-items:center; justify-content:center;">B</div>
+        
         <span>BestCart</span>
     </div>
 
